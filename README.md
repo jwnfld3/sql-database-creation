@@ -156,6 +156,8 @@ CREATE TABLE Orders (
 
 **Explanation**: This table stores order data and references `CustomerID` from the `Customers` table to maintain relational integrity.
 
+![image](https://github.com/user-attachments/assets/cbf99d8f-fbf9-493a-adea-68f9484f7764)
+
 ---
 
 ## Conclusion
