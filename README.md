@@ -158,6 +158,53 @@ CREATE TABLE Orders (
 
 ![image](https://github.com/user-attachments/assets/cbf99d8f-fbf9-493a-adea-68f9484f7764)
 
+## Line-by-Line Explanation of `CREATE TABLE Orders`
+
+### `CREATE TABLE Orders (`
+- Begins the creation of a new table named `Orders`.
+- All columns and constraints for the table are defined within the parentheses.
+
+---
+
+### `OrderID INT PRIMARY KEY IDENTITY(1,1),`
+- **OrderID**: A column that uniquely identifies each order.
+- **INT**: Specifies the data type as an integer.
+- **PRIMARY KEY**: Ensures each value is unique and not null.
+- **IDENTITY(1,1)**: Auto-generates values starting at 1, incrementing by 1 for each new record.
+
+---
+
+### `CustomerID INT,`
+- A column that stores the ID of the customer placing the order.
+- **INT**: Must match the data type of the related primary key in the `Customers` table.
+
+---
+
+### `OrderDate DATE,`
+- Stores the date on which the order was placed.
+- **DATE**: Stores only the date (no time component).
+
+---
+
+### `TotalAmount DECIMAL(10,2),`
+- Represents the total monetary amount of the order.
+- **DECIMAL(10,2)**:
+  - `10` = total number of digits allowed (including those after the decimal).
+  - `2` = number of digits after the decimal point.
+  - Allows values like `99999999.99`.
+
+---
+
+### `FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID)`
+- Creates a **foreign key constraint**.
+- Links the `CustomerID` column in this table to the `CustomerID` in the `Customers` table.
+- Enforces referential integrity so an order must be tied to a valid customer.
+
+---
+
+### `);`
+- Ends the `CREATE TABLE` command.
+
 ---
 
 ## Conclusion
