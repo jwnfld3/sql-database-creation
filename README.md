@@ -75,6 +75,8 @@ USE ShopEZ;
 
 **Explanation**: This command sets `ShopEZ` as the current working database so that all future actions apply to it.
 
+![image](https://github.com/user-attachments/assets/1685aa37-650c-47fa-a50e-b2120d6ac3ba)
+
 ---
 
 ### Step 6: Create the Customers Table
