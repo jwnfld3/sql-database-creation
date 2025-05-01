@@ -22,6 +22,8 @@ This lab simulates the initial setup of a customer and order tracking system for
 
 **Explanation**: SSMS is the primary tool used to interact with SQL Server environments. It provides an interface to create and manage databases.
 
+![image](https://github.com/user-attachments/assets/5cba38ab-3af8-433e-bb56-826b49d1a892)
+
 ---
 
 ### Step 2: Connect to a SQL Server Instance
@@ -34,6 +36,8 @@ This lab simulates the initial setup of a customer and order tracking system for
 
 **Explanation**: This step connects to the local SQL Server instance, making it possible to issue SQL commands.
 
+![image](https://github.com/user-attachments/assets/1f303886-29d8-4c1b-8662-7ac0f9184e4d)
+
 ---
 
 ### Step 3: Open a New Query Window
@@ -42,6 +46,8 @@ This lab simulates the initial setup of a customer and order tracking system for
 - A new blank query editor will open.
 
 **Explanation**: This window is where SQL statements are written and executed.
+
+![image](https://github.com/user-attachments/assets/587dc57f-3c79-40b9-ae74-7f4839ae50c7)
 
 ---
 
@@ -54,6 +60,8 @@ CREATE DATABASE ShopEZ;
 - Click **Execute** (or press F5).
 
 **Explanation**: This command initializes a new database named `ShopEZ`, which will store all the related tables.
+
+![image](https://github.com/user-attachments/assets/56d4c2df-bd85-406c-93b6-c853fd20b3fd)
 
 ---
 
