@@ -95,6 +95,8 @@ CREATE TABLE Customers (
 
 **Explanation**: This creates a table to store customer details. `CustomerID` is auto-incremented and used as the primary key.
 
+![image](https://github.com/user-attachments/assets/b07ebbff-66bf-4564-9dec-66a6cb2a1324)
+
 ## Line-by-Line Explanation
 
 ### `CREATE TABLE Customers (`
