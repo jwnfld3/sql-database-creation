@@ -15,29 +15,61 @@ This lab simulates the initial setup of a customer and order tracking system for
 
 ## Steps
 
-### Step 1: Create the Database
+### Step 1: Launch SQL Server Management Studio (SSMS)
+
+- Open SSMS from the Windows Start Menu.
+- Wait for the application to load.
+
+**Explanation**: SSMS is the primary tool used to interact with SQL Server environments. It provides an interface to create and manage databases.
+
+---
+
+### Step 2: Connect to a SQL Server Instance
+
+- In Object Explorer, click the **Connect** button.
+- Select **Database Engine**.
+- For **Server Name**, enter `localhost`, `.`, or `(local)` if SQL Server is installed locally.
+- Choose **Windows Authentication** (default).
+- Click **Connect**.
+
+**Explanation**: This step connects to the local SQL Server instance, making it possible to issue SQL commands.
+
+---
+
+### Step 3: Open a New Query Window
+
+- Click on **New Query** in the top toolbar.
+- A new blank query editor will open.
+
+**Explanation**: This window is where SQL statements are written and executed.
+
+---
+
+### Step 4: Create the ShopEZ Database
 
 ```sql
 CREATE DATABASE ShopEZ;
 ```
+- Paste the command into the query window.
+- Click **Execute** (or press F5).
 
-**Explanation**:  
-This command initializes a new SQL database named `ShopEZ`, which will act as the container for all tables, data, and future operations.
+**Explanation**: This command initializes a new database named `ShopEZ`, which will store all the related tables.
 
 ---
 
-### Step 2: Switch to the New Database
+### Step 5: Switch to the ShopEZ Database
 
 ```sql
 USE ShopEZ;
 ```
+- Paste the command below the previous one or in a new query window.
+- Click **Execute**.
 
-**Explanation**:  
-Before creating tables, the session needs to explicitly reference the correct database. This ensures all following operations are executed inside the `ShopEZ` environment.
+**Explanation**: This command sets `ShopEZ` as the current working database so that all future actions apply to it.
 
 ---
 
-### Step 3: Create the `Customers` Table
+### Step 6: Create the Customers Table
 
 ```sql
 CREATE TABLE Customers (
@@ -48,13 +80,14 @@ CREATE TABLE Customers (
     JoinDate DATE
 );
 ```
+- Paste into the query editor.
+- Click **Execute**.
 
-**Explanation**:  
-This table will store customer information. `CustomerID` is an auto-incrementing primary key. `FirstName`, `LastName`, and `Email` are text fields, while `JoinDate` records when the customer was added to the system.
+**Explanation**: This creates a table to store customer details. `CustomerID` is auto-incremented and used as the primary key.
 
 ---
 
-### Step 4: Create the `Orders` Table
+### Step 7: Create the Orders Table
 
 ```sql
 CREATE TABLE Orders (
@@ -65,12 +98,13 @@ CREATE TABLE Orders (
     FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID)
 );
 ```
+- Paste into the query editor.
+- Click **Execute**.
 
-**Explanation**:  
-The `Orders` table captures each transaction. `CustomerID` links each order to a customer in the `Customers` table, enforcing a one-to-many relationship via a foreign key. `TotalAmount` is a decimal value supporting two decimal places for currency.
+**Explanation**: This table stores order data and references `CustomerID` from the `Customers` table to maintain relational integrity.
 
 ---
 
 ## Conclusion
 
-By completing this lab, a functional SQL database structure has been created, capable of storing customer and order data. This structure is foundational for performing business queries, customer management, and financial reporting in future labs or development stages.
+This lab walked through connecting to SQL Server via SSMS, creating a database, and designing two foundational tables. The structure supports essential operations like storing customer profiles and tracking their orders, which are key components of any transactional business application.
