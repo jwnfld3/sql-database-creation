@@ -95,6 +95,47 @@ CREATE TABLE Customers (
 
 **Explanation**: This creates a table to store customer details. `CustomerID` is auto-incremented and used as the primary key.
 
+## Line-by-Line Explanation
+
+### `CREATE TABLE Customers (`
+Starts the creation of a new table named `Customers`.
+
+---
+
+### `CustomerID INT PRIMARY KEY IDENTITY(1,1),`
+- **CustomerID**: Column name that uniquely identifies each customer.  
+- **INT**: Data type for whole numbers.  
+- **PRIMARY KEY**: Ensures uniqueness and non-null values for this column.  
+- **IDENTITY(1,1)**: Automatically generates incremental values starting at 1 and increasing by 1 for each new row.
+
+---
+
+### `FirstName NVARCHAR(50),`
+- Stores the customer's first name.  
+- `NVARCHAR(50)` allows up to 50 Unicode characters for multilingual support.
+
+---
+
+### `LastName NVARCHAR(50),`
+- Stores the customer's last name.  
+- Also uses `NVARCHAR(50)` to support international character sets.
+
+---
+
+### `Email NVARCHAR(100),`
+- Holds the customer's email address.  
+- `NVARCHAR(100)` allows for longer email formats, up to 100 characters.
+
+---
+
+### `JoinDate DATE`
+- Tracks the date the customer joined.  
+- `DATE` stores only the date portion (e.g., `2025-05-01`), with no time.
+
+---
+
+### `);`
+Ends the `CREATE TABLE` command.
 ---
 
 ### Step 7: Create the Orders Table
