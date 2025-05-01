@@ -1,4 +1,4 @@
-# SQL Lab 1: Create a Customer Database
+# Create a Customer Database
 
 ## Overview
 This lab simulates the initial setup of a customer and order tracking system for a small e-commerce company. It focuses on designing a basic relational database using SQL. Two tables — `Customers` and `Orders` — will be created to support customer management and order processing.
